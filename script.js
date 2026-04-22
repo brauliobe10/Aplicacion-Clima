@@ -1,4 +1,3 @@
-const API_KEY = 'ff67747575497cc7f4c17f66c6132f5c';
 const searchBtn = document.getElementById('searchBtn');
 const cityInput = document.getElementById('cityInput');
 const weatherDisplay = document.getElementById('weatherResult');
@@ -12,16 +11,12 @@ cityInput.addEventListener('keypress', (e) => {
 });
 
 async function getWeather(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=es`;
+    // Ya no usamos la URL de OpenWeather, usamos nuestra propia ruta local
+    const url = `/api/get-weather?city=${city}`;
     
     try {
         const response = await fetch(url);
         const data = await response.json();
-
-        if (response.status === 401) {
-            showError("API Key en proceso de activación. Espera unos minutos.");
-            return;
-        }
 
         if (data.cod === "404") {
             showError("Ciudad no encontrada");
