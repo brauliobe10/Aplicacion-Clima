@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Pro | KOdeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="app-container">
+        <header class="search-section">
+            <h1>Clima<span>KodeWave</span></h1>
+            <div class="search-bar">
+                <input type="text" id="cityInput" placeholder="Busca una ciudad">
+                <button id="searchBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </header>
+
+        <section id="weatherResult" class="weather-display">
+            <div class="main-info">
+                <h2 id="cityName">---</h2>
+                <div class="temp-wrapper">
+                    <img id="weatherIcon" src="https://openweathermap.org/img/wn/01d@4x.png" alt="Icono">
+                    <span id="temp">--</span><span class="unit">°C</span>
+                </div>
+                <p id="description">Introduce una ciudad para comenzar</p>
+            </div>
+
+            <div class="extra-details">
+                <div class="detail-item">
+                    <span class="label">Humedad</span>
+                    <span id="humidity" class="value">--</span><span class="value">%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Viento</span>
+                    <span id="wind" class="value">--</span><span class="value"> km/h</span>
+                </div>
+            </div>
+        </section>
+
+        <p id="errorMsg" class="error-toast"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
