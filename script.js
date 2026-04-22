@@ -12,7 +12,7 @@ cityInput.addEventListener('keypress', (e) => {
 
 async function getWeather(city) {
     // Ya no usamos la URL de OpenWeather, usamos nuestra propia ruta local
-    const url = `/api/get-weather?city=${city}`;
+    const url = `/api/get-wheather?city=${city}`;
     
     try {
         const response = await fetch(url);
